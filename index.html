@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Como en Casa · Bed &amp; Breakfast en Villa La Angostura</title>
+<meta name="description" content="El B&amp;B de Lili y Orlando en Villa La Angostura: cama calentita, desayuno casero y reserva directa. 9,9 en Booking.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Como en Casa · B&amp;B">
+<meta property="og:title" content="Como en Casa · B&amp;B en Villa La Angostura">
+<meta property="og:description" content="Cama calentita, desayuno casero y reserva directa con Lili y Orlando.">
+<meta property="og:url" content="https://comoencasa-vla.vercel.app/">
+<meta property="og:image" content="https://comoencasa-vla.vercel.app/img/og.jpg?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Cartel de madera de Como en Casa frente a la casa, con la frase: Llegás como huésped, te vas como amigo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://comoencasa-vla.vercel.app/img/og.jpg?v=1">
+<meta name="theme-color" content="#34503A">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<script>
+  // intro solo con JS y sin "reducir movimiento"; ?sinintro la saltea
+  (function () {
+    var d = document.documentElement; d.classList.add('js');
+    var q = location.search;
+    if (!/sinintro|kit_estadia/.test(q) && !matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('con-intro');
+    var m = q.match(/temporada=(verano|invierno)/), mes = new Date().getMonth() + 1;
+    d.dataset.temporada = m ? m[1] : (mes >= 5 && mes <= 9 ? 'invierno' : 'verano');
+  })();
+</script>
+<link rel="preload" href="fonts/Fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Delius.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/f/hero-cartel-900.webp" imagesrcset="img/f/hero-cartel-900.webp 900w, img/f/hero-cartel-1400.webp 1400w" imagesizes="(min-width: 1100px) 48vw, 92vw">
+<link rel="stylesheet" href="kit/kit.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+<!-- ============ INTRO: el cartel que se talla y se cuelga ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__cartel" id="intro-cartel">
+    <svg class="intro__soga" viewBox="0 0 800 140" preserveAspectRatio="none"><path d="M250 0 V140 M550 0 V140"/></svg>
+    <img class="intro__svg" src="img/cartel.svg" alt="" width="800" height="270">
+  </div>
+</div>
+
+<a class="skip" href="#casa">Saltar al contenido</a>
+
+<!-- ============ BARRA ============ -->
+<header class="barra" id="barra">
+  <div class="barra__in">
+    <a class="barra__logo" href="#top" aria-label="Como en Casa, inicio"><img src="img/logo.svg" alt="Como en casa" width="640" height="130"></a>
+    <nav class="barra__nav" aria-label="Secciones">
+      <a href="#casa">La casa</a><a href="#habitaciones">Habitaciones</a><a href="#desayuno">Desayuno</a><a href="#villa">La Villa</a><a href="#visitas">Libro de visitas</a>
+    </nav>
+    <a class="btn btn--rojo barra__cta" href="#reservar">Reservar estadía</a>
+    <button class="barra__menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+
+    <!-- WOW: el gato de la baranda -->
+    <div class="gato" id="gato" aria-hidden="true">
+      <span class="gato__globo" id="gato-globo"></span>
+      <svg class="gato__svg" viewBox="0 0 120 120">
+        <path class="gato__cola" d="M88 98 C112 96 116 74 106 62" />
+        <ellipse cx="60" cy="88" rx="30" ry="24" class="gato__cuerpo"/>
+        <path d="M44 70 q4 8 0 16 M76 70 q-4 8 0 16 M60 66 v10" class="gato__rayas"/>
+        <ellipse cx="47" cy="110" rx="9" ry="5" class="gato__pata"/><ellipse cx="73" cy="110" rx="9" ry="5" class="gato__pata"/>
+        <g class="gato__cabeza">
+          <path d="M30 40 L34 14 L50 30 Z M90 40 L86 14 L70 30 Z" class="gato__cuerpo"/>
+          <path d="M36 34 L37 22 L45 30 Z M84 34 L83 22 L75 30 Z" class="gato__oreja"/>
+          <ellipse cx="60" cy="46" rx="31" ry="26" class="gato__cuerpo"/>
+          <path d="M52 22 q8 6 16 0 M48 27 q12 7 24 0 M60 20 v9" class="gato__rayas"/>
+          <ellipse cx="60" cy="58" rx="14" ry="10" class="gato__hocico"/>
+          <g class="gato__ojos">
+            <g class="gato__ojo"><ellipse cx="48" cy="45" rx="6.5" ry="7" class="gato__iris"/><ellipse class="gato__pupila" cx="48" cy="45" rx="2.4" ry="5"/></g>
+            <g class="gato__ojo"><ellipse cx="72" cy="45" rx="6.5" ry="7" class="gato__iris"/><ellipse class="gato__pupila" cx="72" cy="45" rx="2.4" ry="5"/></g>
+            <path class="gato__dormido" d="M42 46 q6 4 12 0 M66 46 q6 4 12 0"/>
+          </g>
+          <path d="M57 54 h6 l-3 3 z" class="gato__nariz"/>
+          <path d="M60 57 q-3 4 -7 2 M60 57 q3 4 7 2" class="gato__boca"/>
+          <path d="M44 56 h-16 M44 60 l-15 4 M76 56 h16 M76 60 l15 4" class="gato__bigotes"/>
+        </g>
+      </svg>
+      <span class="gato__z">z</span>
+    </div>
+  </div>
+</header>
+
+<!-- menú celu -->
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Menú">
+    <a href="#casa">La casa</a><a href="#habitaciones">Habitaciones</a><a href="#desayuno">Desayuno</a><a href="#villa">La Villa</a><a href="#visitas">Libro de visitas</a><a href="#antes">Antes de venir</a>
+    <a class="btn btn--rojo" href="#reservar">Reservar estadía</a>
+  </nav>
+</div>
+
+<main id="top">
+
+<!-- ============ HERO A ============ -->
+<section class="hero" aria-labelledby="hero-t">
+  <div class="hero__txt">
+    <p class="mano hero__kicker" data-in>Bed &amp; breakfast de Lili y Orlando</p>
+    <h1 id="hero-t" class="hero__t"><span class="linea"><span>Llegás como huésped,</span></span> <span class="linea"><span>te vas como amigo.</span></span></h1>
+    <p class="hero__sub" data-in><span class="solo-verano">Mate en el jardín, el lago a diez minutos y un desayuno casero que todos recuerdan.</span><span class="solo-invierno">Una cama calentita, el hogar prendido y una charla cuando afuera nieva.</span> A diez cuadras del centro de Villa La Angostura.</p>
+    <div class="hero__btns" data-in>
+      <a class="btn btn--rojo btn--grande" href="#reservar">Ver fechas libres</a>
+      <a class="btn btn--linea btn--grande" href="https://wa.me/5491144156483?text=Hola%20Lili%20y%20Orlando!%20Quer%C3%ADa%20consultar%20por%20una%20estad%C3%ADa." target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+    </div>
+    <div class="hero__pie" data-in>
+      <div class="temporada" role="group" aria-label="Ver la casa en">
+        <button type="button" data-temp="verano" aria-pressed="false">Verano</button>
+        <button type="button" data-temp="invierno" aria-pressed="false">Invierno</button>
+      </div>
+      <ul class="hero__notas">
+        <li><b data-cuenta="9.9" data-dec="1">9,9</b> en Booking</li>
+        <li><b data-cuenta="4.9" data-dec="1">4,9</b>★ en Google</li>
+        <li><b data-cuenta="10">10</b> en limpieza</li>
+      </ul>
+    </div>
+  </div>
+  <figure class="hero__foto">
+    <div class="hero__marco">
+      <img class="solo-verano" src="img/f/hero-cartel-900.webp" srcset="img/f/hero-cartel-900.webp 900w, img/f/hero-cartel-1400.webp 1400w" sizes="(min-width: 1100px) 48vw, 92vw" width="1400" height="1155" alt="El cartel de madera tallada “Como en casa” frente a la casa, con la tranquera roja" fetchpriority="high">
+      <img class="solo-invierno" src="img/f/casa-nieve-900.webp" srcset="img/f/casa-nieve-900.webp 900w, img/f/casa-nieve-1600.webp 1600w" sizes="(min-width: 1100px) 48vw, 92vw" width="1600" height="1200" alt="La casa con la tranquera roja, toda nevada" loading="lazy" decoding="async">
+    </div>
+    <figcaption class="nota-mano hero__nota">“Lili y Orlando, 2 genios”<small>Emanuel · Booking</small></figcaption>
+  </figure>
+</section>
+
+<!-- ============ LA CASA ============ -->
+<section class="casa bloque" id="casa" aria-labelledby="casa-t">
+  <div class="cont casa__grid">
+    <div class="casa__txt">
+      <p class="kicker" data-in>La casa</p>
+      <h2 id="casa-t" class="titulo" data-in>Soñamos toda la vida con vivir en la Patagonia.</h2>
+      <p data-in>Hace unos años lo cumplimos, y por casa empezaron a pasar amigos. Nos resultó entrañable darles la comodidad y el afecto que desearíamos para nuestros hijos cuando viajan. Por eso abrimos la casa como bed &amp; breakfast.</p>
+      <p data-in>Te ofrecemos una cama calentita, un rico desayuno casero, un buen libro o una película en un día de lluvia, <span class="solo-verano">una tardecita de mate en el jardín</span><span class="solo-invierno">una charla frente al hogar cuando nieva</span> y la compañía de nuestras mascotas. Queremos que, cuando te vayas, sepas que dejaste amigos.</p>
+      <p class="firma mano" data-in>Con cariño, Lili y Orlando</p>
+    </div>
+    <div class="casa__mosaico" data-in>
+      <figure class="m1"><img src="img/f/living-900.webp" srcset="img/f/living-900.webp 900w, img/f/living-1600.webp 1600w" sizes="(min-width: 900px) 30vw, 80vw" width="1600" height="1200" alt="El living con el hogar de piedra, sillones rojos y mantas" loading="lazy" decoding="async"></figure>
+      <figure class="m2"><img src="img/f/biblioteca-800.webp" width="800" height="600" alt="La biblioteca de la casa, llena de libros" loading="lazy" decoding="async"></figure>
+      <figure class="m3">
+        <img class="solo-verano" src="img/f/jardin-3-900.webp" width="900" height="403" alt="El jardín con pérgola de madera y césped" loading="lazy" decoding="async">
+        <img class="solo-invierno" src="img/f/galeria-nieve-900.webp" width="900" height="675" alt="La pérgola y el jardín cubiertos de nieve" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+  <ul class="cont servicios" aria-label="Lo que tenés en casa">
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18V8M3 14h18v4M21 18v-6a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="2"/></svg>Cama calentita y calefacción</li>
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 10h12v4a5 5 0 0 1-5 5h-2a5 5 0 0 1-5-5Z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3c0 1.5 1 1.5 1 3M12 3c0 1.5 1 1.5 1 3"/></svg>Desayuno casero incluido</li>
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 20V9l6-5 6 5v11"/><path d="M10 20v-5h4v5"/><path d="M9 11c1.5 2 4.5 2 6 0"/></svg>Hogar y living compartido</li>
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18a7 7 0 0 1 14 0"/><path d="M12 4v3M4.5 9 6.6 11M19.5 9l-2.1 2M2 18h20"/></svg>Jardín y terraza solárium</li>
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9 9 0 0 1 13 0M9 16a4 4 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/></svg>Wifi (10 en Booking)</li>
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="11" rx="3"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M3 11h18"/></svg>Estacionamiento en la casa</li>
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4ZM20 19V5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6Z"/></svg>Libros y pelis para días de lluvia</li>
+    <li data-in><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>Ayuda con excursiones</li>
+  </ul>
+</section>
+
+<!-- ============ HABITACIONES ============ -->
+<section class="habs bloque" id="habitaciones" aria-labelledby="habs-t">
+  <div class="cont">
+    <div class="cabeza">
+      <p class="kicker" data-in>Habitaciones</p>
+      <h2 id="habs-t" class="titulo" data-in>Dos habitaciones, nada más.</h2>
+      <p class="cabeza__sub" data-in>Así cada huésped es atendido de cerca. Las dos dan al jardín, tienen calefacción, TV y comparten un baño impecable (10 en limpieza).</p>
+    </div>
+    <div class="habs__grid">
+      <article class="hab" data-in>
+        <div class="carru" data-carru tabindex="0" aria-label="Fotos de la habitación Doble Deluxe">
+          <div class="carru__pista">
+            <img src="img/f/deluxe-1-800.webp" srcset="img/f/deluxe-1-800.webp 800w, img/f/deluxe-1-1400.webp 1400w" sizes="(min-width: 900px) 45vw, 90vw" width="1400" height="1050" alt="Habitación Doble Deluxe con cama queen y cuadros" loading="lazy" decoding="async" draggable="false">
+            <img src="img/f/deluxe-3-800.webp" width="800" height="600" alt="La Deluxe con escritorio y TV" loading="lazy" decoding="async" draggable="false">
+            <img src="img/f/deluxe-2-800.webp" width="800" height="600" alt="Detalle de la cama con toallas" loading="lazy" decoding="async" draggable="false">
+            <img src="img/f/bano-1-700.webp" width="700" height="525" alt="El baño compartido, con ducha y bacha de madera" loading="lazy" decoding="async" draggable="false">
+          </div>
+          <div class="carru__nav"><button type="button" data-prev aria-label="Foto anterior">‹</button><span class="carru__dots"></span><button type="button" data-next aria-label="Foto siguiente">›</button></div>
+        </div>
+        <div class="hab__txt">
+          <h3>Doble Deluxe</h3>
+          <ul class="chips"><li>Cama queen</li><li>20 m²</li><li>Vista al jardín</li><li>TV y calefacción</li></ul>
+          <div class="hab__pie"><p class="hab__precio">Desde <b>$104.481</b> la noche<small>Para dos · desayuno incluido</small></p>
+          <button type="button" class="btn btn--rojo" data-kit-open="estadias" data-kit-hab="deluxe">Ver fechas</button></div>
+        </div>
+      </article>
+      <article class="hab" data-in>
+        <div class="carru" data-carru tabindex="0" aria-label="Fotos de la habitación Doble 2 camas">
+          <div class="carru__pista">
+            <img src="img/f/doscamas-1-800.webp" srcset="img/f/doscamas-1-800.webp 800w, img/f/doscamas-1-1280.webp 1280w" sizes="(min-width: 900px) 45vw, 90vw" width="1280" height="960" alt="Habitación con dos camas individuales, placard y escritorio" loading="lazy" decoding="async" draggable="false">
+            <img src="img/f/doscamas-2-700.webp" width="700" height="933" alt="Las dos camas individuales con acolchados lilas" loading="lazy" decoding="async" draggable="false">
+            <img src="img/f/bano-2-700.webp" width="700" height="933" alt="El baño compartido con ducha" loading="lazy" decoding="async" draggable="false">
+          </div>
+          <div class="carru__nav"><button type="button" data-prev aria-label="Foto anterior">‹</button><span class="carru__dots"></span><button type="button" data-next aria-label="Foto siguiente">›</button></div>
+        </div>
+        <div class="hab__txt">
+          <h3>Doble 2 camas</h3>
+          <ul class="chips"><li>2 camas individuales</li><li>Vista al jardín</li><li>TV y calefacción</li></ul>
+          <div class="hab__pie"><p class="hab__precio">Desde <b>$104.481</b> la noche<small>Para dos · desayuno incluido</small></p>
+          <button type="button" class="btn btn--rojo" data-kit-open="estadias" data-kit-hab="dos-camas">Ver fechas</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESAYUNO: la mesa ============ -->
+<section class="desayuno bloque" id="desayuno" aria-labelledby="des-t">
+  <div class="cont des__grid">
+    <div class="des__txt">
+      <p class="kicker" data-in>Desayuno</p>
+      <h2 id="des-t" class="titulo" data-in>La mesa, cada mañana.</h2>
+      <p data-in>Pan y tortas caseras, café recién hecho y todo servido en la vajilla de flores. Con horario y opciones flexibles: si salís temprano a una excursión, avisás y listo.</p>
+      <blockquote class="cita" data-in>“Desayuno variado y abundante. La simpatía de Liliana y Orlando, los dueños.”<cite>Francisco, España · Booking</cite></blockquote>
+      <p class="des__ayuda" data-in><span class="mano">Tocá los puntitos de la mesa</span></p>
+    </div>
+    <figure class="mesa" data-in>
+      <img src="img/f/desayuno-1-900.webp" srcset="img/f/desayuno-1-900.webp 900w, img/f/desayuno-1-1600.webp 1600w" sizes="(min-width: 900px) 55vw, 92vw" width="1600" height="1200" alt="La mesa del desayuno: panera, jamón y queso, dulces, manteca y tazas con flores" loading="lazy" decoding="async">
+      <button type="button" class="punto" style="--x:13%;--y:68%" aria-describedby="p1"><span class="sr">Pan y tortas caseras</span></button>
+      <button type="button" class="punto" style="--x:46%;--y:38%" aria-describedby="p2"><span class="sr">Jamón y queso</span></button>
+      <button type="button" class="punto" style="--x:37%;--y:53%" aria-describedby="p3"><span class="sr">Dulces y manteca</span></button>
+      <button type="button" class="punto" style="--x:35%;--y:71%" aria-describedby="p4"><span class="sr">Café recién hecho</span></button>
+      <button type="button" class="punto" style="--x:73%;--y:68%" aria-describedby="p5"><span class="sr">La vajilla de flores</span></button>
+      <div class="mesa__tips" aria-live="polite">
+        <p id="p1" class="tip"><b>Pan y tortas caseras</b>Hechos en casa. “Delicious homemade bread and cakes” — Truc, Chile.</p>
+        <p id="p2" class="tip"><b>Jamón y queso</b>Para los que arrancan el día con salado.</p>
+        <p id="p3" class="tip"><b>Dulces y manteca</b>En potecitos, para untar el pan casero.</p>
+        <p id="p4" class="tip"><b>Café recién hecho</b>O té, en la taza de flores. “Freshly-brewed coffee” — Truc.</p>
+        <p id="p5" class="tip"><b>La vajilla de flores</b>Con fucsias pintadas, como las que crecen en el jardín.</p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ LOS DE LA CASA ============ -->
+<section class="mascotas bloque" aria-labelledby="mas-t">
+  <div class="cont mas__grid">
+    <div class="mas__txt">
+      <p class="kicker" data-in>Los de la casa</p>
+      <h2 id="mas-t" class="titulo" data-in>Te reciben en la baranda.</h2>
+      <p data-in>Dos gatos y una perra que juega en la nieve. Si no te llevás bien con los animales, avisanos: viven acá. (Los huéspedes no pueden traer mascotas.)</p>
+      <p class="nota-mano mas__carta" data-in>“Vamos a extrañar a Eva, a Gato y a Casimiro”<small>Brian y Jesu, en una cartita</small></p>
+    </div>
+    <div class="polas" data-polas>
+      <figure class="pola" style="--r:-4deg" tabindex="0"><img src="img/f/gato-baranda-800.webp" width="800" height="600" alt="Un gato atigrado sentado en la baranda de madera, al sol" loading="lazy" decoding="async"><figcaption class="mano">El de la baranda</figcaption></figure>
+      <figure class="pola" style="--r:3deg" tabindex="0"><img src="img/f/gatos-ventana-800.webp" width="800" height="600" alt="Dos gatos grises mirando por la ventana hacia el jardín" loading="lazy" decoding="async"><figcaption class="mano">Mirando el jardín</figcaption></figure>
+      <figure class="pola" style="--r:-2deg" tabindex="0"><img src="img/f/perra-nieve-700.webp" width="700" height="748" alt="Una perra negra con collar verde jugando en la nieve" loading="lazy" decoding="async"><figcaption class="mano">Fan de la nieve</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LA VILLA: mapa ilustrado ============ -->
+<section class="villa bloque" id="villa" aria-labelledby="villa-t">
+  <div class="cont">
+    <div class="cabeza">
+      <p class="kicker" data-in>La Villa</p>
+      <h2 id="villa-t" class="titulo" data-in>Todo queda cerca.</h2>
+      <p class="cabeza__sub" data-in>Estamos en un barrio tranquilo, a 10 cuadras del centro y a 3 de la Ruta 40. Minutos en auto desde casa:</p>
+    </div>
+    <div class="villa__grid">
+      <div class="mapa" data-in>
+        <svg viewBox="0 0 600 420" role="img" aria-label="Mapa ilustrativo de Villa La Angostura con los lugares cercanos">
+          <defs><pattern id="olas" width="22" height="10" patternUnits="userSpaceOnUse"><path d="M0 6 q5.5 -5 11 0 t11 0" fill="none" stroke="#FBF8F2" stroke-opacity=".35" stroke-width="1.4"/></pattern></defs>
+          <rect width="600" height="420" fill="#E9DECB"/>
+          <path class="mapa__lago" d="M0 300 C80 270 150 300 210 320 C240 290 236 250 262 236 C276 262 268 300 300 318 C360 300 420 296 470 310 C520 322 560 300 600 292 V420 H0Z"/>
+          <path class="mapa__lago" d="M0 70 C40 60 90 72 130 92 C160 108 168 126 150 136 C120 150 70 120 0 128Z"/>
+          <path class="mapa__lago mapa__lago--olas" d="M0 300 C80 270 150 300 210 320 C240 290 236 250 262 236 C276 262 268 300 300 318 C360 300 420 296 470 310 C520 322 560 300 600 292 V420 H0Z"/>
+          <path d="M262 236 C250 300 238 350 214 400" class="mapa__penin"/>
+          <path class="mapa__ruta" d="M0 196 C120 186 200 192 290 178 C380 164 470 150 600 120"/>
+          <text x="470" y="140" class="mapa__ruta-t">Ruta 40</text>
+          <path class="mapa__cerro" d="M430 120 L470 60 L510 120Z M490 120 L525 74 L560 120Z"/>
+          <text x="300" y="384" class="mapa__agua">Lago Nahuel Huapi</text>
+          <text x="20" y="108" class="mapa__agua">L. Correntoso</text>
+          <g class="mapa__casa" transform="translate(300 168)"><circle r="22"/><path d="M-10 4 V-4 L0 -12 L10 -4 V4 Z"/><text y="40">Como en casa</text></g>
+        </svg>
+        <button type="button" class="pin" style="--x:60%;--y:28%" data-pin="0" aria-label="Cascada Inacayal, 5 minutos"><span>5′</span></button>
+        <button type="button" class="pin" style="--x:30%;--y:24%" data-pin="1" aria-label="Playa del Lago Correntoso, 8 minutos"><span>8′</span></button>
+        <button type="button" class="pin" style="--x:80%;--y:20%" data-pin="2" aria-label="Cerro Bayo, 9 minutos"><span>9′</span></button>
+        <button type="button" class="pin" style="--x:52%;--y:66%" data-pin="3" aria-label="Bahía Mansa, 10 minutos"><span>10′</span></button>
+        <button type="button" class="pin" style="--x:40%;--y:84%" data-pin="4" aria-label="Bosque de Arrayanes e Istmo de Quetrihué, 10 minutos"><span>10′</span></button>
+        <button type="button" class="pin" style="--x:90%;--y:13%" data-pin="5" aria-label="Cascada Río Bonito, 21 minutos"><span>21′</span></button>
+        <p class="mapa__aviso">Mapa ilustrativo</p>
+      </div>
+      <ol class="lugares" data-in>
+        <li data-lugar="0"><b>Cascada Inacayal</b><span>5 min</span></li>
+        <li data-lugar="1"><b>Playa del Lago Correntoso</b><span>8 min</span></li>
+        <li data-lugar="2"><b>Cerro Bayo</b><span>9 min</span></li>
+        <li data-lugar="3"><b>Bahía Mansa</b><span>10 min</span></li>
+        <li data-lugar="4"><b>Bosque de Arrayanes · Istmo de Quetrihué</b><span>10 min</span></li>
+        <li data-lugar="5"><b>Cascada Río Bonito</b><span>21 min</span></li>
+        <li class="lugares__extra"><b>Aeropuerto de Bariloche</b><span>83 km</span></li>
+      </ol>
+    </div>
+    <div class="tira" data-carru-libre aria-label="Fotos de la zona">
+      <figure><img src="img/f/lago-2-900.webp" width="900" height="675" alt="El lago con montañas nevadas de fondo" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/playa-900.webp" width="900" height="675" alt="Playa de arena en el lago, agua transparente" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/lago-3-800.webp" width="800" height="600" alt="Orilla del lago con bosque" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/picaflor-700.webp" width="700" height="525" alt="Un picaflor junto al bebedero" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/muelle-800.webp" width="800" height="600" alt="Postes de un viejo muelle en el lago" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/retama-600.webp" width="600" height="800" alt="Flores amarillas de retama" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/lago-5-900.webp" width="900" height="675" alt="El lago entre árboles y montañas" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/fucsia-600.webp" width="600" height="691" alt="Flores de fucsia del jardín" loading="lazy" decoding="async" draggable="false"></figure>
+      <figure><img src="img/f/carpintero-700.webp" width="700" height="525" alt="Un carpintero negro en un árbol" loading="lazy" decoding="async" draggable="false"></figure>
+    </div>
+    <p class="tira__pie mano">Fotos de Lili y Orlando por la zona</p>
+  </div>
+</section>
+
+<!-- ============ LIBRO DE VISITAS ============ -->
+<section class="visitas bloque" id="visitas" aria-labelledby="vis-t">
+  <div class="cont">
+    <div class="cabeza cabeza--centro">
+      <p class="kicker" data-in>Libro de visitas</p>
+      <h2 id="vis-t" class="titulo" data-in>Lo que nos dejan escrito.</h2>
+      <p class="cabeza__sub" data-in><span class="solo-fino">Arrastrá las cartas para leerlas todas.</span><span class="solo-dedo">Deslizá las cartas para pasar a la siguiente.</span></p>
+    </div>
+    <div class="libro" data-libro>
+      <article class="carta carta--papel" style="--r:-5deg;--x:1%;--y:3%"><p class="mano">Queridos Lili y Orlando: sin duda alguna, estas vacaciones se van a quedar en mi corazón, no sólo por los paisajes con los que se llena mi alma, sino porque me llevo el recuerdo de haber compartido estos días con 2 personas maravillosas y amorosas. Me hicieron sentir “como en casa”.</p><span class="carta__de">Cartita pegada en la casa</span></article>
+      <article class="carta carta--rayada" style="--r:4deg;--x:26%;--y:1%"><p class="mano">Lili y Orlando: fueron unas hermosas vacaciones. Conocimos lugares mágicos, pero además nos vamos felices porque nos llevamos unos padres de la Patagonia. ¡Realmente nos sentimos como en casa!</p><span class="carta__de">Brian y Jesu</span></article>
+      <article class="carta carta--resena" style="--r:-2deg;--x:51%;--y:4%"><p>“Te hacen sentir como en tu casa. Están constantemente preocupados porque te sientas cómodo.”</p><span class="carta__de">Rodrigo · Uruguay · Booking</span></article>
+      <article class="carta carta--amarilla" style="--r:3deg;--x:76%;--y:2%"><p class="mano mano--grande">¡Gracias por manejarme al muelle ayer y su hospitalidad!</p><span class="carta__de">Un huésped</span></article>
+      <article class="carta carta--resena" style="--r:6deg;--x:3%;--y:52%"><p>“El alojamiento es perfecto si lo que buscás es sentirte en casa. La habitación muy limpia y calentita: el día que fui estaba nevando.”</p><span class="carta__de">Juliana · Chile · Booking</span></article>
+      <article class="carta carta--resena" style="--r:-4deg;--x:28%;--y:50%"><p>“Desayuno excelente, muy completo. Muy linda casa, barrio tranquilo, jardín precioso para pasar un rato afuera. Hermosos michis.”</p><span class="carta__de">Tomás · Argentina · Booking</span></article>
+      <article class="carta carta--resena" style="--r:3deg;--x:53%;--y:53%"><p>“Lili es increíble, te atiende 20 puntos, está atenta a todo lo que necesites.”</p><span class="carta__de">Silvina · Google</span></article>
+      <article class="carta carta--resena" style="--r:-3deg;--x:77%;--y:49%"><p>“Sin duda de las mejores experiencias que tuve viajando. Lili y Orlando, 2 genios.”</p><span class="carta__de">Emanuel · Argentina · Booking</span></article>
+    </div>
+    <div class="libro__pie">
+      <ul class="puntajes">
+        <li><b data-cuenta="9.9" data-dec="1">9,9</b><span>Booking · 35 opiniones</span></li>
+        <li><b data-cuenta="4.9" data-dec="1">4,9</b><span>Google · 82 opiniones</span></li>
+        <li><b data-cuenta="10">10</b><span>Limpieza y atención</span></li>
+      </ul>
+      <a class="btn btn--linea" href="https://wa.me/5491144156483?text=Hola%20Lili%20y%20Orlando!%20Les%20dejo%20mi%20cartita%3A%20" target="_blank" rel="noopener">¿Ya viniste? Dejanos tu cartita</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANTES DE VENIR ============ -->
+<section class="antes bloque" id="antes" aria-labelledby="antes-t">
+  <div class="cont antes__grid">
+    <div>
+      <p class="kicker" data-in>Antes de venir</p>
+      <h2 id="antes-t" class="titulo" data-in>Lo que conviene saber.</h2>
+      <img class="antes__foto" src="img/f/comedor-800.webp" width="800" height="451" alt="El comedor de la casa con mesa de madera" loading="lazy" decoding="async" data-in>
+    </div>
+    <div class="acordeon" data-in>
+      <details open><summary>Horarios</summary><p>Check-in de 14:30 a 20 h (contanos a qué hora llegás). Check-out hasta las 10:30. La puerta de entrada se cierra de 23 a 0 h.</p></details>
+      <details><summary>Quiénes pueden venir</summary><p>Es una casa para adultos: no se pueden alojar menores ni hay cunas. No se admiten mascotas de los huéspedes y no se fuma adentro. Silencio de 22 a 8 h.</p></details>
+      <details><summary>Cómo llegar</summary><p>Zapala 668, Villa La Angostura (Neuquén). Barrio tranquilo, a 10 cuadras del centro y a 3 de la Ruta 40, cerca de supermercados y estaciones de servicio. El aeropuerto de Bariloche queda a 83 km. Hay estacionamiento en la casa.</p></details>
+      <details><summary>Paseos y traslados</summary><p>Lili y Orlando te asesoran con las excursiones de la zona. Varios huéspedes cuentan que los llevaron al muelle o a otros puntos: consultanos por WhatsApp.</p></details>
+      <details><summary>Cómo se reserva</summary><p>Elegís fechas y habitación acá abajo. Podés dejarla señada con Mercado Pago o mandarnos la consulta por WhatsApp y la confirmamos personalmente.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESERVAR ============ -->
+<section class="reservar bloque" id="reservar" aria-labelledby="res-t">
+  <div class="cont">
+    <div class="cabeza">
+      <p class="kicker mano reservar__kicker" data-in>Directo con nosotros, sin intermediarios</p>
+      <h2 id="res-t" class="titulo" data-in>¿Cuándo venís?</h2>
+    </div>
+    <div class="reservar__box" data-in>
+      <div data-kit="estadias"><p class="cargando">Cargando el calendario…</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="pie">
+  <div class="cont pie__grid">
+    <div class="pie__marca">
+      <img src="img/logo-claro.svg" alt="Como en casa" width="640" height="130" loading="lazy">
+      <p>Bed &amp; breakfast de Lili y Orlando<br>en Villa La Angostura, Patagonia.</p>
+    </div>
+    <div>
+      <h3>Dónde estamos</h3>
+      <p>Zapala 668<br>Villa La Angostura, Neuquén</p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Zapala%20668%2C%20Villa%20La%20Angostura" target="_blank" rel="noopener">Ver en el mapa ↗</a>
+    </div>
+    <div>
+      <h3>Hablemos</h3>
+      <p><a href="https://wa.me/5491144156483" target="_blank" rel="noopener">WhatsApp 11 4415-6483</a></p>
+      <p>Check-in 14:30 a 20 h · Check-out hasta 10:30</p>
+    </div>
+  </div>
+  <div class="cont pie__fin">
+    <span>© Como en Casa B&amp;B</span>
+    <span class="credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></span>
+  </div>
+</footer>
+
+<a class="wa-flota" href="https://wa.me/5491144156483?text=Hola%20Lili%20y%20Orlando!%20Quer%C3%ADa%20consultar%20por%20una%20estad%C3%ADa." target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.3L2 22l4.8-1.2A11 11 0 1 0 20.5 3.5Zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.8.8-2.8-.2-.3A9 9 0 1 1 12 20.5Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.6.1-.2 0-.3 0-.5l-.9-2c-.2-.5-.5-.5-.6-.5h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg></a>
+
+<canvas class="nieve" id="nieve" aria-hidden="true"></canvas>
+
+<script type="module" src="js/main.js?v=4"></script>
+</body>
+</html>

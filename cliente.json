@@ -1,0 +1,62 @@
+{
+  "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+  "id": "bb-como-en-casa",
+  "nombre": "Como en Casa",
+  "pais": "AR",
+  "idioma": "es",
+  "modo": "demo",
+  "whatsapp": "5491144156483",
+  "prefijoPedido": "CC",
+  "supabase": { "url": "", "anonKey": "" },
+  "marca": {
+    "logo": "img/logo.svg",
+    "logoPanel": "img/logo-claro.svg",
+    "favicon": "img/favicon.png",
+    "colores": {
+      "fondo": "#F5EEE2",
+      "superficie": "#FBF8F2",
+      "texto": "#3A2618",
+      "primario": "#7C2B22",
+      "acento": "#E3B71C",
+      "borde": "#DDCDB4"
+    },
+    "fuentes": {
+      "titulos": "'Fraunces', Georgia, serif",
+      "texto": "'Figtree', system-ui, sans-serif",
+      "googleFonts": ""
+    },
+    "estilo": { "forma": "pildora", "radio": "18px", "sombra": "suave", "borde": "1.5px", "mayusculas": false }
+  },
+  "modulos": { "carta": false, "carrito": false, "reservas": false, "estadias": true, "admin": true, "cartaQR": false },
+  "horarios": {
+    "lun": [["08:00", "22:00"]], "mar": [["08:00", "22:00"]], "mie": [["08:00", "22:00"]], "jue": [["08:00", "22:00"]],
+    "vie": [["08:00", "22:00"]], "sab": [["08:00", "22:00"]], "dom": [["08:00", "22:00"]]
+  },
+  "estadias": {
+    "habitaciones": [
+      { "id": "deluxe", "nombre": "Doble Deluxe", "descripcion": "Cama queen · 20 m² · vista al jardín", "capacidad": 2, "foto": "img/f/deluxe-1-800.webp" },
+      { "id": "dos-camas", "nombre": "Doble 2 camas", "descripcion": "2 camas individuales · vista al jardín", "capacidad": 2, "foto": "img/f/doscamas-1-800.webp" }
+    ],
+    "tarifas": {
+      "base": { "deluxe": 104481, "dos-camas": 104481 },
+      "temporadas": [
+        { "id": "verano", "nombre": "Verano", "desde": "12-15", "hasta": "03-15", "precios": { "deluxe": null, "dos-camas": null }, "minNoches": 2 },
+        { "id": "invierno", "nombre": "Invierno / nieve", "desde": "07-01", "hasta": "09-30", "precios": { "deluxe": null, "dos-camas": null }, "minNoches": 2 }
+      ]
+    },
+    "sena": 30,
+    "minNoches": 1,
+    "maxNoches": 30,
+    "diasAdelante": 365,
+    "checkin": ["14:30", "20:00"],
+    "checkout": "10:30"
+  },
+  "pagos": {
+    "mercadopago": { "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference", "modo": "sandbox" }
+  },
+  "textos": {
+    "panel": "Panel de Lili y Orlando",
+    "estTitulo": "¿Cuándo venís?",
+    "comentario": "Algo que quieras contarnos (opcional)"
+  }
+}
